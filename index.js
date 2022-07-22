@@ -26,12 +26,9 @@ const mainnet = "https://gasstation-mumbai.matic.today/v2"
             )
         };        
         console.log('loading')
-        const start = new Date().getTime();
         const tx = await myContract.methods.
             createToken("working","WRK", "web3js.com").
             send(rawTransaction);
-        const end = new Date().getTime();
-        const time = end - start;
         console.log('done')
         console.log('tx',tx)
 }
